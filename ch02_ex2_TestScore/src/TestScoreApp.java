@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+//import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class TestScoreApp {
 
     public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class TestScoreApp {
 		Scanner sc = new Scanner(System.in);
 
         // get a series of test scores from the user
-        while (testScore <= 100) {
+        while (testScore < 999 || testScore > 999) {
             // get the input from the user
             System.out.print("Enter score: ");
             String input = sc.nextLine();
@@ -26,6 +28,9 @@ public class TestScoreApp {
             if (testScore <= 100) {
                 scoreCount = scoreCount + 1;
                 scoreTotal = scoreTotal + testScore;
+            } else if(testScore>100 && testScore != 999) {
+            	
+            System.out.println("Invalid entry; not counted");
             }
         }
 
