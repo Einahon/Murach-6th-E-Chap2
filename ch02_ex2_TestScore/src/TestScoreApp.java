@@ -11,9 +11,9 @@ public class TestScoreApp {
         System.out.println();  // print a blank line
 
         // initialize variables and create a Scanner object
-        int scoreTotal = 0;
-        int scoreCount = 0;
-        int testScore = 0;
+        double scoreTotal = 0;
+        double scoreCount = 0;
+        double testScore = 0;
         @SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
@@ -22,10 +22,10 @@ public class TestScoreApp {
             // get the input from the user
             System.out.print("Enter score: ");
             String input = sc.nextLine();
-            testScore = Integer.parseInt(input);
+            testScore = Double.parseDouble(input);
 
             // accumulate score count and score total
-            if (testScore <= 100) {
+            if (testScore<=100 && testScore>0) {
                 scoreCount = scoreCount + 1;
                 scoreTotal = scoreTotal + testScore;
             } else if(testScore>100 && testScore != 999) {
