@@ -11,9 +11,9 @@ public class TestScoreApp {
         System.out.println();  // print a blank line
 
         // initialize variables and create a Scanner object
-        double scoreTotal = 0;
-        double scoreCount = 0;
-        double testScore = 0;
+        double scoreTotal = 0.0;
+        double scoreCount = 0.0;
+        double testScore = 0.0;
         @SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
